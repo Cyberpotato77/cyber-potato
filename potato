@@ -1,1 +1,247 @@
-hello world
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber Potato — Program Development</title>
+  <meta name="description" content="Cyber Potato — creative program development, apps & automation." />
+  <style>
+    :root {
+      --black: #000;
+      --gray: #f5f5f7;
+      --text: #1d1d1f;
+      --accent: #0071e3;
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--gray);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    nav {
+      max-width: 980px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+
+    nav img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      background: white;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin: 0.5rem 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    .hero a.button {
+      background: var(--accent);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .hero a.button:hover {
+      background: #005bb5;
+    }
+
+    section {
+      padding: 6rem 2rem;
+      max-width: 980px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f5f5f7;
+      color: #6e6e73;
+      font-size: 0.9rem;
+      border-top: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><img src="cyber potato.png" alt="Cyber Potato Logo"></div>
+      <div>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero visible">
+    <h1>Innovation Baked to Perfection</h1>
+    <p>At Cyber Potato, we craft software that’s sleek, efficient, and delightfully simple — just like Apple, but with more potato power.</p>
+    <a href="#contact" class="button">Get Started</a>
+  </section>
+
+  <section id="services">
+    <h2>What We Do</h2>
+    <div class="services">
+      <div class="card">
+        <h3>App Development</h3>
+        <p>World-class mobile and web apps that perform seamlessly across devices.</p>
+      </div>
+      <div class="card">
+        <h3>Automation</h3>
+        <p>Streamline workflows and boost productivity with powerful automation.</p>
+      </div>
+      <div class="card">
+        <h3>AI & Analytics</h3>
+        <p>Gain insights and intelligence with custom data-driven tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Our Work</h2>
+    <div class="portfolio">
+      <div class="card">
+        <h3>Project Aurora</h3>
+        <p>A minimal dashboard app built for speed and scalability.</p>
+      </div>
+      <div class="card">
+        <h3>Zen Sync</h3>
+        <p>Data synchronization service with smooth user experience.</p>
+      </div>
+      <div class="card">
+        <h3>CloudX</h3>
+        <p>Automated cloud management suite for modern businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="max-width:700px;margin:auto;text-align:center;color:#555;font-size:1.1rem;">Cyber Potato is a collective of software artisans, designers, and problem-solvers inspired by simplicity and function. We turn ideas into intuitive digital experiences that people love.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;color:#555;">Ready to bring your idea to life? Reach out to us today.</p>
+    <form style="max-width:500px;margin:2rem auto;display:flex;flex-direction:column;gap:1rem;">
+      <input type="text" placeholder="Name" required style="padding:1rem;border-radius:10px;border:1px solid #ccc;">
+      <input type="email" placeholder="Email" required style="padding:1rem;border-radius:10px;border:1px solid #ccc;">
+      <textarea placeholder="Message" rows="4" style="padding:1rem;border-radius:10px;border:1px solid #ccc;"></textarea>
+      <button type="submit" style="padding:1rem;border:none;border-radius:50px;background:var(--accent);color:white;font-weight:600;cursor:pointer;">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Cyber Potato. Designed with precision and care.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
