@@ -1,247 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cyber Potato — Program Development</title>
-  <meta name="description" content="Cyber Potato — creative program development, apps & automation." />
-  <style>
-    :root {
-      --black: #000;
-      --gray: #f5f5f7;
-      --text: #1d1d1f;
-      --accent: #0071e3;
-      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      color: var(--text);
-      background: var(--gray);
-      overflow-x: hidden;
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(20px);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      z-index: 10;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    nav {
-      max-width: 980px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      font-size: 0.9rem;
-    }
-
-    nav img {
-      height: 50px;
-      width: auto;
-    }
-
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      min-height: 100vh;
-      background: white;
-      padding: 0 2rem;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 600;
-      margin: 0.5rem 0;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 1.5rem;
-      color: #555;
-    }
-
-    .hero a.button {
-      background: var(--accent);
-      color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .hero a.button:hover {
-      background: #005bb5;
-    }
-
-    section {
-      padding: 6rem 2rem;
-      max-width: 980px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .services, .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f5f5f7;
-      color: #6e6e73;
-      font-size: 0.9rem;
-      border-top: 1px solid #e0e0e0;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberPotato | App Development Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" />
 </head>
-<body>
-  <header>
-    <nav>
-      <div><img src="cyber potato.png" alt="Cyber Potato Logo"></div>
-      <div>
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+<body class="bg-gray-950 text-gray-100 font-sans">
 
-  <section class="hero visible">
-    <h1>Innovation Baked to Perfection</h1>
-    <p>At Cyber Potato, we craft software that’s sleek, efficient, and delightfully simple — just like Apple, but with more potato power.</p>
-    <a href="#contact" class="button">Get Started</a>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-6 bg-gray-900 sticky top-0 z-50 shadow-md">
+    <h1 class="text-2xl font-extrabold text-purple-400">CyberPotato</h1>
+    <ul class="flex gap-6 text-sm">
+      <li><a href="#about" class="hover:text-purple-400">About</a></li>
+      <li><a href="#services" class="hover:text-purple-400">Services</a></li>
+      <li><a href="#portfolio" class="hover:text-purple-400">Portfolio</a></li>
+      <li><a href="#contact" class="hover:text-purple-400">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="h-screen flex flex-col items-center justify-center text-center px-6">
+    <h2 class="text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+      Building Tomorrow’s Apps Today
+    </h2>
+    <p class="text-gray-400 max-w-lg mb-6">
+      We’re a creative development studio turning ideas into powerful digital products.
+    </p>
+    <a href="#contact" class="bg-purple-500 hover:bg-purple-600 px-6 py-3 rounded-full font-semibold text-white transition">
+      Get in Touch
+    </a>
   </section>
 
-  <section id="services">
-    <h2>What We Do</h2>
-    <div class="services">
-      <div class="card">
-        <h3>App Development</h3>
-        <p>World-class mobile and web apps that perform seamlessly across devices.</p>
+  <!-- About -->
+  <section id="about" class="py-20 bg-gray-900 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-4 text-purple-400">About Us</h3>
+    <p class="max-w-2xl mx-auto text-gray-400">
+      CyberPotato is a forward-thinking app development company that specializes in creating sleek,
+      scalable, and high-performance mobile and web applications. Our mission is to fuse creativity and code
+      to deliver innovative user experiences.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-purple-400">Our Services</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg">
+        <h4 class="text-xl font-semibold mb-2 text-purple-300">App Development</h4>
+        <p class="text-gray-400">Native and cross-platform apps built for performance and scalability.</p>
       </div>
-      <div class="card">
-        <h3>Automation</h3>
-        <p>Streamline workflows and boost productivity with powerful automation.</p>
+      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg">
+        <h4 class="text-xl font-semibold mb-2 text-purple-300">Web Design</h4>
+        <p class="text-gray-400">Modern, responsive web design that brings your brand to life.</p>
       </div>
-      <div class="card">
-        <h3>AI & Analytics</h3>
-        <p>Gain insights and intelligence with custom data-driven tools.</p>
+      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg">
+        <h4 class="text-xl font-semibold mb-2 text-purple-300">UI/UX Strategy</h4>
+        <p class="text-gray-400">Intuitive designs crafted for seamless user experiences.</p>
       </div>
     </div>
   </section>
 
-  <section id="work">
-    <h2>Our Work</h2>
-    <div class="portfolio">
-      <div class="card">
-        <h3>Project Aurora</h3>
-        <p>A minimal dashboard app built for speed and scalability.</p>
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-20 bg-gray-900 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-purple-400">Our Work</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/400x250" alt="App 1" class="w-full">
+        <div class="p-4">
+          <h4 class="font-semibold text-lg">Project One</h4>
+          <p class="text-gray-400 text-sm">A sleek mobile app with next-gen design.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Zen Sync</h3>
-        <p>Data synchronization service with smooth user experience.</p>
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/400x250" alt="App 2" class="w-full">
+        <div class="p-4">
+          <h4 class="font-semibold text-lg">Project Two</h4>
+          <p class="text-gray-400 text-sm">Cross-platform web solution for business growth.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>CloudX</h3>
-        <p>Automated cloud management suite for modern businesses.</p>
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+        <img src="https://via.placeholder.com/400x250" alt="App 3" class="w-full">
+        <div class="p-4">
+          <h4 class="font-semibold text-lg">Project Three</h4>
+          <p class="text-gray-400 text-sm">UI/UX prototype with intuitive flow and visuals.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p style="max-width:700px;margin:auto;text-align:center;color:#555;font-size:1.1rem;">Cyber Potato is a collective of software artisans, designers, and problem-solvers inspired by simplicity and function. We turn ideas into intuitive digital experiences that people love.</p>
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-4 text-purple-400">Get in Touch</h3>
+    <p class="text-gray-400 mb-8">Let’s bring your idea to life. Reach out and let’s build something great.</p>
+    <a href="mailto:contact@cyberpotato.dev" class="bg-purple-500 hover:bg-purple-600 px-8 py-3 rounded-full font-semibold text-white transition">
+      contact@cyberpotato.dev
+    </a>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p style="text-align:center;color:#555;">Ready to bring your idea to life? Reach out to us today.</p>
-    <form style="max-width:500px;margin:2rem auto;display:flex;flex-direction:column;gap:1rem;">
-      <input type="text" placeholder="Name" required style="padding:1rem;border-radius:10px;border:1px solid #ccc;">
-      <input type="email" placeholder="Email" required style="padding:1rem;border-radius:10px;border:1px solid #ccc;">
-      <textarea placeholder="Message" rows="4" style="padding:1rem;border-radius:10px;border:1px solid #ccc;"></textarea>
-      <button type="submit" style="padding:1rem;border:none;border-radius:50px;background:var(--accent);color:white;font-weight:600;cursor:pointer;">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    © <span id="year"></span> Cyber Potato. Designed with precision and care.
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6 text-center text-gray-500 text-sm">
+    © <span id="year"></span> CyberPotato. All rights reserved.
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-
-    sections.forEach(section => observer.observe(section));
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
